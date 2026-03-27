@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   },
   description:
     "Muziekworkshops, teambuildings en lessen die verbinden, verrassen en laten groeien. Geen voorkennis nodig — alleen nieuwsgierigheid en goesting.",
-  metadataBase: new URL("https://klankentapper.be"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://klankentapper.be")
+  ),
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
