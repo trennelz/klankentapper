@@ -10,8 +10,8 @@ export function TypoBreaker() {
         style={{ maskImage: "radial-gradient(ellipse 70% 80% at 60% 50%, black 30%, transparent 75%)" }}
       >
         <ConcentricLines
-          variant="wide"
-          animate="breathe"
+          variant="offset"
+          animate="drift"
           className="h-[90vh] w-[90vh]"
         />
       </div>

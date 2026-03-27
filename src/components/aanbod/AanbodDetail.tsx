@@ -30,7 +30,7 @@ export function AanbodDetail({ item }: AanbodDetailProps) {
           className="pointer-events-none absolute top-0 right-[-10%] text-teal opacity-[0.07]"
           style={{ maskImage: "radial-gradient(ellipse 60% 70% at 60% 30%, black 30%, transparent 80%)" }}
         >
-          <ConcentricLines variant="wide" animate="breathe" className="h-[80vh] w-[80vh]" />
+          <ConcentricLines variant="tight" className="h-[80vh] w-[80vh]" />
         </div>
         <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <div className="grid md:grid-cols-12 md:gap-12">

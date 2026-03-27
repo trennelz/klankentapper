@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { ContactStrip } from "@/components/home/ContactStrip";
+import { DecorativeShape } from "@/components/ui/DecorativeShapes";
 
 export const metadata: Metadata = {
   title: "Over Klankentapper",
@@ -13,10 +14,16 @@ export default function OverPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
-        <div className="mx-auto max-w-[var(--max-width-site)]">
+      <section className="relative overflow-hidden bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
+        <div
+          className="pointer-events-none absolute top-1/2 right-[-15%] -translate-y-1/2 text-goud opacity-20"
+          style={{ maskImage: "radial-gradient(ellipse 65% 75% at 55% 50%, black 25%, transparent 70%)" }}
+        >
+          <DecorativeShape variant="spiral" animate="drift" className="h-[70vh] w-[70vh]" />
+        </div>
+        <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
-            <p className="font-body text-xs uppercase tracking-[0.15em] text-teal">
+            <p className="font-display text-lg italic text-purple">
               De mens achter de klank
             </p>
             <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">
@@ -73,8 +80,14 @@ export default function OverPage() {
       </section>
 
       {/* Visie / pull quote */}
-      <section className="bg-donker px-6 py-20 md:px-10 md:py-32">
-        <div className="mx-auto max-w-[var(--max-width-site)]">
+      <section className="relative overflow-hidden bg-donker px-6 py-20 md:px-10 md:py-32">
+        <div
+          className="pointer-events-none absolute bottom-[-20%] left-[-10%] text-koraal opacity-10"
+          style={{ maskImage: "radial-gradient(ellipse 70% 70% at 50% 60%, black 20%, transparent 70%)" }}
+        >
+          <DecorativeShape variant="spiral" animate="breathe" className="h-[50vh] w-[50vh]" />
+        </div>
+        <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
             <blockquote className="max-w-3xl font-display text-[clamp(1.8rem,3.5vw,3rem)] leading-[1.15] text-wit">
               Laat je verrassen, laat je raken en&hellip;{" "}

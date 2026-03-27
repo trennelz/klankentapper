@@ -11,7 +11,6 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <ConcentricLines
           variant="wide"
-          animate="breathe"
           className="h-[160vw] w-[160vw] text-goud opacity-30 md:h-[110vh] md:w-[110vh]"
         />
       </div>
@@ -46,9 +45,17 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-none tracking-tight text-donker"
-          style={{ mixBlendMode: "multiply" }}
         >
-          Klankentapper
+          {"Klankentapper".split("").map((char, i) => (
+            <span
+              key={`${char}-${i}`}
+              style={{
+                animation: `hero-char-color 16s ease-in-out ${i * 0.13 + 1.8}s infinite`,
+              }}
+            >
+              {char}
+            </span>
+          ))}
         </motion.h1>
 
         {/* CTA pinned to bottom of hero, clear of the video */}

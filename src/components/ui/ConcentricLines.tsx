@@ -34,13 +34,13 @@ function WideVariant({ className, style }: VariantProps) {
       style={style}
       aria-hidden="true"
     >
-      <ellipse cx="310" cy="290" rx="58" ry="56" stroke="currentColor" strokeWidth="0.6" />
-      <ellipse cx="308" cy="292" rx="95" ry="92" stroke="currentColor" strokeWidth="0.7" />
-      <ellipse cx="312" cy="288" rx="138" ry="134" stroke="currentColor" strokeWidth="0.8" />
-      <ellipse cx="306" cy="294" rx="182" ry="178" stroke="currentColor" strokeWidth="1.0" />
-      <ellipse cx="314" cy="286" rx="228" ry="224" stroke="currentColor" strokeWidth="1.1" />
-      <ellipse cx="308" cy="290" rx="270" ry="266" stroke="currentColor" strokeWidth="1.2" />
-      <ellipse cx="312" cy="292" rx="296" ry="292" stroke="currentColor" strokeWidth="0.8" />
+      <ellipse cx="300" cy="300" rx="58" ry="56" stroke="currentColor" strokeWidth="0.6" />
+      <ellipse cx="298" cy="302" rx="95" ry="92" stroke="currentColor" strokeWidth="0.7" />
+      <ellipse cx="302" cy="298" rx="138" ry="134" stroke="currentColor" strokeWidth="0.8" />
+      <ellipse cx="296" cy="304" rx="182" ry="178" stroke="currentColor" strokeWidth="1.0" />
+      <ellipse cx="304" cy="296" rx="228" ry="224" stroke="currentColor" strokeWidth="1.1" />
+      <ellipse cx="298" cy="300" rx="270" ry="266" stroke="currentColor" strokeWidth="1.2" />
+      <ellipse cx="302" cy="302" rx="296" ry="292" stroke="currentColor" strokeWidth="0.8" />
     </svg>
   );
 }

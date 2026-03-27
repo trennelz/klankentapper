@@ -4,13 +4,24 @@ import { ConcentricLines } from "@/components/ui/ConcentricLines";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-donker px-6 py-16 text-wit md:px-10 md:py-24">
-      <ConcentricLines className="pointer-events-none absolute -bottom-[30%] -right-[10%] h-[50vh] w-[50vh] text-goud opacity-10" />
+      <ConcentricLines variant="offset" className="pointer-events-none absolute -bottom-[30%] -right-[10%] h-[50vh] w-[50vh] text-goud opacity-10" />
       <div className="relative mx-auto grid max-w-[var(--max-width-site)] gap-12 md:grid-cols-12 md:gap-8">
         {/* Name / tagline */}
         <div className="md:col-span-5">
-          <p className="font-display text-3xl md:text-4xl">Klankentapper</p>
+          <p className="font-display text-3xl md:text-4xl">
+            {"Klankentapper".split("").map((char, i) => (
+              <span
+                key={`${char}-${i}`}
+                style={{
+                  animation: `hero-char-color 16s ease-in-out ${i * 0.13 + 1.8}s infinite`,
+                }}
+              >
+                {char}
+              </span>
+            ))}
+          </p>
           <p className="mt-4 max-w-sm font-body text-sm leading-relaxed text-wit/60">
-            Muziek die verbindt, verrast en laat groeien.
+            Workshops, teambuildings en lessen vol ritme, klank en verbinding.
           </p>
         </div>
 
@@ -59,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-wit/10 pt-8 md:col-span-12">
+        <div className="pt-8 md:col-span-12">
           <p className="font-body text-xs text-wit/30">
             &copy; {new Date().getFullYear()} Klankentapper
           </p>

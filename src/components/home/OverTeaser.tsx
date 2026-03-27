@@ -4,7 +4,7 @@ import { AnimateIn } from "@/components/ui/AnimateIn";
 
 export function OverTeaser() {
   return (
-    <section className="bg-pistache px-6 py-24 md:px-10 md:py-40">
+    <section className="bg-creme px-6 py-24 md:px-10 md:py-40">
       <div className="mx-auto grid max-w-[var(--max-width-site)] gap-12 md:grid-cols-12 md:gap-8">
         {/* Portrait image */}
         <AnimateIn className="md:col-span-5">
@@ -22,7 +22,7 @@ export function OverTeaser() {
         {/* Text */}
         <div className="flex flex-col justify-center md:col-span-6 md:col-start-7">
           <AnimateIn delay={0.1}>
-            <p className="font-display text-lg italic text-donker/60">
+            <p className="font-display text-lg italic text-purple">
               Wie is de klankentapper?
             </p>
             <h2 className="mt-3 font-display text-4xl text-donker md:text-5xl">

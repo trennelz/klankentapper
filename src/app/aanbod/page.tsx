@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AanbodSpread } from "@/components/aanbod/AanbodSpread";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { ContactStrip } from "@/components/home/ContactStrip";
-import { ConcentricLines } from "@/components/ui/ConcentricLines";
+import { DecorativeShape } from "@/components/ui/DecorativeShapes";
 
 export const metadata: Metadata = {
   title: "Aanbod",
@@ -69,7 +69,7 @@ export default function AanbodPage() {
           className="pointer-events-none absolute top-1/2 right-[-15%] -translate-y-1/2 text-goud opacity-20"
           style={{ maskImage: "radial-gradient(ellipse 70% 80% at 60% 50%, black 30%, transparent 75%)" }}
         >
-          <ConcentricLines variant="wide" animate="breathe" className="h-[70vh] w-[70vh]" />
+          <DecorativeShape variant="burst" animate="breathe" className="h-[70vh] w-[70vh]" />
         </div>
         <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
