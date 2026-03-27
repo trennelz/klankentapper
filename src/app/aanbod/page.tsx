@@ -64,24 +64,24 @@ export default function AanbodPage() {
   return (
     <>
       {/* Page header */}
-      <section className="relative overflow-hidden bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
+      <section className="relative overflow-hidden bg-cornsilk px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
         <div
-          className="pointer-events-none absolute top-1/2 right-[-15%] -translate-y-1/2 text-goud opacity-20"
+          className="pointer-events-none absolute top-1/2 right-[-15%] -translate-y-1/2 text-koraal opacity-15"
           style={{ maskImage: "radial-gradient(ellipse 70% 80% at 60% 50%, black 30%, transparent 75%)" }}
         >
           <DecorativeShape variant="burst" animate="breathe" className="h-[70vh] w-[70vh]" />
         </div>
         <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
-            <p className="font-display text-lg italic text-goud">
+            <p className="font-display text-lg italic text-teal/80">
               Wat heeft Klankentapper te bieden?
             </p>
-            <h1 className="mt-2 font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">
+            <h1 className="mt-2 font-display text-[clamp(2.5rem,5vw,5rem)] text-donker">
               Aanbod
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 max-w-xl font-body text-lg text-wit/60">
+            <p className="mt-4 max-w-xl font-body text-lg text-donker/70">
               Muziek voor iedereen. Speels, verbindend en verrassend
               toegankelijk. Geen voorkennis nodig — alleen nieuwsgierigheid en
               goesting om mee te doen.

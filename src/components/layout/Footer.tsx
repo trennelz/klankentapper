@@ -5,7 +5,7 @@ import { WaveLine } from "@/components/ui/WaveLine";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-donker px-6 py-16 text-wit md:px-10 md:py-24">
-      <ConcentricLines variant="offset" className="pointer-events-none absolute -bottom-[20%] -right-[5%] h-[50vh] w-[50vh] text-goud opacity-10" />
+      <ConcentricLines variant="offset" className="pointer-events-none absolute -bottom-[20%] -right-[5%] h-[50vh] w-[50vh] text-koraal opacity-15" />
       <div className="relative mx-auto grid max-w-[var(--max-width-site)] gap-12 md:grid-cols-12 md:gap-8">
         {/* Name / tagline */}
         <div className="md:col-span-5">

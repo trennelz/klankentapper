@@ -13,21 +13,21 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
+      <section className="relative overflow-hidden bg-cornsilk px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
         <div
-          className="pointer-events-none absolute top-1/2 left-[-20%] -translate-y-1/2 text-goud opacity-15"
+          className="pointer-events-none absolute top-1/2 left-[-20%] -translate-y-1/2 text-koraal opacity-15"
           style={{ maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 70%)" }}
         >
           <DecorativeShape variant="waves" animate="pulse" className="h-[80vh] w-[80vh]" />
         </div>
         <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
-            <h1 className="font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">
+            <h1 className="font-display text-[clamp(2.5rem,5vw,5rem)] text-donker">
               Contact
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 max-w-xl font-body text-lg text-wit/60">
+            <p className="mt-4 max-w-xl font-body text-lg text-donker/70">
               Benieuwd wat Klankentapper voor jou kan betekenen? Neem
               vrijblijvend contact op.
             </p>

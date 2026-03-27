@@ -12,7 +12,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <ConcentricLines
           variant="wide"
-          className="h-[160vw] w-[160vw] text-goud opacity-30 md:h-[110vh] md:w-[110vh]"
+          className="h-[160vw] w-[160vw] text-koraal opacity-20 md:h-[110vh] md:w-[110vh]"
         />
       </div>
 
