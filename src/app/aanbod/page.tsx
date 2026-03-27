@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AanbodSpread } from "@/components/aanbod/AanbodSpread";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { ContactStrip } from "@/components/home/ContactStrip";
+import { ConcentricLines } from "@/components/ui/ConcentricLines";
 
 export const metadata: Metadata = {
   title: "Aanbod",
@@ -63,10 +64,19 @@ export default function AanbodPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
-        <div className="mx-auto max-w-[var(--max-width-site)]">
+      <section className="relative overflow-hidden bg-donker px-6 pt-32 pb-16 md:px-10 md:pt-44 md:pb-24">
+        <div
+          className="pointer-events-none absolute top-1/2 right-[-15%] -translate-y-1/2 text-goud opacity-20"
+          style={{ maskImage: "radial-gradient(ellipse 70% 80% at 60% 50%, black 30%, transparent 75%)" }}
+        >
+          <ConcentricLines variant="wide" animate="breathe" className="h-[70vh] w-[70vh]" />
+        </div>
+        <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
-            <h1 className="font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">
+            <p className="font-display text-lg italic text-goud">
+              Wat heeft Klankentapper te bieden?
+            </p>
+            <h1 className="mt-2 font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">
               Aanbod
             </h1>
           </AnimateIn>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { ConcentricLines } from "@/components/ui/ConcentricLines";
 import type { AanbodItem } from "@/lib/aanbod-data";
 
 interface AanbodDetailProps {
@@ -24,8 +25,14 @@ export function AanbodDetail({ item }: AanbodDetailProps) {
       </section>
 
       {/* Content */}
-      <section className="px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto max-w-[var(--max-width-site)]">
+      <section className="relative overflow-hidden px-6 py-16 md:px-10 md:py-24">
+        <div
+          className="pointer-events-none absolute top-0 right-[-10%] text-teal opacity-[0.07]"
+          style={{ maskImage: "radial-gradient(ellipse 60% 70% at 60% 30%, black 30%, transparent 80%)" }}
+        >
+          <ConcentricLines variant="wide" animate="breathe" className="h-[80vh] w-[80vh]" />
+        </div>
+        <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <div className="grid md:grid-cols-12 md:gap-12">
             {/* Main content - narrow column */}
             <div className="md:col-span-7">
@@ -37,7 +44,10 @@ export function AanbodDetail({ item }: AanbodDetailProps) {
                   &larr; Terug naar aanbod
                 </Link>
 
-                <h1 className="mt-8 font-display text-[clamp(2.5rem,4vw,4rem)] text-ink">
+                <p className="mt-8 font-display text-lg italic text-teal">
+                  {item.type}
+                </p>
+                <h1 className="mt-2 font-display text-[clamp(2.5rem,4vw,4rem)] text-ink">
                   {item.title}
                 </h1>
               </AnimateIn>

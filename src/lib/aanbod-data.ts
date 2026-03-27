@@ -1,6 +1,7 @@
 export interface AanbodItem {
   slug: string;
   title: string;
+  type: string;
   excerpt: string;
   image: string;
   duration: string;
@@ -14,6 +15,7 @@ export const aanbodData: AanbodItem[] = [
   {
     slug: "ukelele-teambuilding",
     title: "Ukelele Teambuilding",
+    type: "Teambuilding workshop",
     excerpt:
       "Niet om te presteren, maar om in het moment te zijn. Samenklank, verbinding en het plezier van iets nieuws ontdekken.",
     image:
@@ -34,6 +36,7 @@ export const aanbodData: AanbodItem[] = [
   {
     slug: "ukelele-initiatie",
     title: "Ukelele Initiatie",
+    type: "Workshopreeks",
     excerpt:
       "Voor wie zich écht wil verdiepen in de wereld van de ukelele. Meerdere sessies, van akkoorden tot fingerpicking.",
     image:
@@ -57,6 +60,7 @@ export const aanbodData: AanbodItem[] = [
   {
     slug: "initiatie-percussie",
     title: "Initiatie Percussie",
+    type: "Percussie workshop",
     excerpt:
       "Een speelse én energieke workshop vol ritme en ontdekking. Van bodypercussion tot polyritmisch samenspel.",
     image:
@@ -79,6 +83,7 @@ export const aanbodData: AanbodItem[] = [
   {
     slug: "samen-zingen",
     title: "Samen Zingen",
+    type: "Zangworkshop",
     excerpt:
       "Een unieke mix van workshop, koorrepetitie en mini-concert. Interactief, met plezier als rode draad.",
     image:
@@ -101,6 +106,7 @@ export const aanbodData: AanbodItem[] = [
   {
     slug: "prive-les",
     title: "Privé Les",
+    type: "Privé les",
     excerpt:
       "Ukelele, gitaar of folkviool — op jouw tempo, in jouw stijl.",
     image:

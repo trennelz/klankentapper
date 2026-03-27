@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TypoBreaker />
       <Intro />
       <AanbodShowcase />
-      <TypoBreaker />
       <OverTeaser />
       <ContactStrip />
     </>
