@@ -33,9 +33,13 @@ export function AanbodDetail({ item }: AanbodDetailProps) {
               <AnimateIn>
                 <Link
                   href="/aanbod"
-                  className="group flex items-center gap-2 font-body text-sm font-medium uppercase tracking-[0.1em] text-ink/60 no-underline transition-colors hover:text-teal"
+                  className="group flex items-center gap-3 font-body text-sm font-medium uppercase tracking-[0.1em] text-ink/60 no-underline transition-colors hover:text-teal"
                 >
-                  <span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">&larr;</span>
+                  <WaveLine 
+                    className="w-8 rotate-180 transition-all duration-300 group-hover:w-12" 
+                    color="currentColor" 
+                    width="auto" 
+                  />
                   Terug naar aanbod
                 </Link>
 
