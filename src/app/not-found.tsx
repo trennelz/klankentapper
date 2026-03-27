@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 export default function NotFound() {
   return (
@@ -18,7 +19,7 @@ export default function NotFound() {
           className="group mt-8 inline-flex items-center gap-3 font-body text-sm uppercase tracking-[0.08em] text-ink no-underline"
         >
           Terug naar home
-          <span className="inline-block h-px w-8 bg-teal transition-all duration-300 group-hover:w-14" />
+          <WaveLine className="w-8 transition-all duration-300 group-hover:w-14" color="var(--color-teal)" width="auto" />
         </Link>
       </div>
     </section>

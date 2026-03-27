@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 const navLinks = [
   { href: "/aanbod", label: "Aanbod" },
@@ -31,7 +32,11 @@ export function Header() {
                 className="group relative font-body text-sm uppercase tracking-[0.05em] text-wit no-underline"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-wit transition-all duration-300 ease-out group-hover:w-full" />
+                <WaveLine 
+                  className="absolute -bottom-1 left-0 w-0 opacity-0 transition-all duration-300 ease-out group-hover:w-full group-hover:opacity-100" 
+                  color="white"
+                  width="100%"
+                />
               </Link>
             </li>
           ))}
@@ -39,6 +44,7 @@ export function Header() {
 
         {/* Mobile menu trigger */}
         <button
+          type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           className="font-body text-sm uppercase tracking-[0.05em] text-wit md:hidden"
         >
@@ -50,6 +56,7 @@ export function Header() {
       {menuOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-start justify-center bg-donker px-10 md:hidden">
           <button
+            type="button"
             onClick={() => setMenuOpen(false)}
             className="absolute top-6 right-6 font-body text-sm uppercase tracking-[0.05em] text-wit"
           >

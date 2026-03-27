@@ -23,7 +23,7 @@ export default function OverPage() {
         </div>
         <div className="relative mx-auto max-w-[var(--max-width-site)]">
           <AnimateIn>
-            <p className="font-display text-lg italic text-purple">
+            <p className="font-display text-lg italic text-koraal">
               De mens achter de klank
             </p>
             <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,5rem)] text-wit">

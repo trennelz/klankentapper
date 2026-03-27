@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 export function OverTeaser() {
   return (
@@ -22,7 +23,7 @@ export function OverTeaser() {
         {/* Text */}
         <div className="flex flex-col justify-center md:col-span-6 md:col-start-7">
           <AnimateIn delay={0.1}>
-            <p className="font-display text-lg italic text-purple">
+            <p className="font-display text-lg italic text-teal">
               Wie is de klankentapper?
             </p>
             <h2 className="mt-3 font-display text-4xl text-donker md:text-5xl">
@@ -46,9 +47,14 @@ export function OverTeaser() {
           <AnimateIn delay={0.3}>
             <Link
               href="/over"
-              className="mt-8 inline-block border border-donker px-7 py-3.5 font-body text-sm uppercase tracking-[0.08em] text-donker no-underline transition-colors duration-200 hover:bg-donker hover:text-wit"
+              className="group relative mt-12 inline-flex items-center gap-4 overflow-hidden bg-donker px-10 py-5 font-body text-xs uppercase tracking-[0.2em] text-wit no-underline transition-all duration-300 hover:bg-donker/90"
             >
-              Meer over Klankentapper
+              <span className="relative z-10">Meer over Klankentapper</span>
+              <WaveLine 
+                className="relative z-10 w-8 transition-all duration-300 group-hover:w-12" 
+                color="white"
+                width="auto"
+              />
             </Link>
           </AnimateIn>
         </div>

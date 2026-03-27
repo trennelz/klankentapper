@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 interface AanbodSpreadProps {
   title: string;
@@ -79,7 +80,7 @@ export function AanbodSpread({
             className="group mt-8 inline-flex items-center gap-3 font-body text-sm uppercase tracking-[0.08em] text-ink no-underline"
           >
             Meer info
-            <span className="inline-block h-px w-8 bg-teal transition-all duration-300 group-hover:w-14" />
+            <WaveLine className="w-8 transition-all duration-300 group-hover:w-14" color="var(--color-teal)" width="auto" />
           </Link>
         </AnimateIn>
       </div>

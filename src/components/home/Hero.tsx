@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ConcentricLines } from "@/components/ui/ConcentricLines";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 export function Hero() {
   return (
@@ -48,7 +49,7 @@ export function Hero() {
         >
           {"Klankentapper".split("").map((char, i) => (
             <span
-              key={`${char}-${i}`}
+              key={`hero-char-${i}-${char}`}
               style={{
                 animation: `hero-char-color 16s ease-in-out ${i * 0.13 + 1.8}s infinite`,
               }}
@@ -67,9 +68,14 @@ export function Hero() {
         >
           <Link
             href="/aanbod"
-            className="inline-block border border-donker/30 px-8 py-4 font-body text-sm uppercase tracking-[0.15em] text-donker no-underline transition-all duration-200 hover:border-donker hover:bg-donker hover:text-creme"
+            className="group relative inline-flex items-center gap-4 overflow-hidden bg-roos-licht px-10 py-5 font-body text-xs uppercase tracking-[0.2em] text-donker no-underline transition-all duration-300 hover:bg-donker hover:text-wit"
           >
-            Ontdek het aanbod
+            <span className="relative z-10">Ontdek het aanbod</span>
+            <WaveLine 
+              className="relative z-10 w-8 transition-all duration-300 group-hover:w-12" 
+              color="currentColor"
+              width="auto"
+            />
           </Link>
         </motion.div>
       </div>

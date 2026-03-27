@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 export function ContactStrip() {
   return (
@@ -17,9 +18,14 @@ export function ContactStrip() {
         <AnimateIn delay={0.15}>
           <Link
             href="/contact"
-            className="mt-2 inline-block border border-wit px-8 py-4 font-body text-sm uppercase tracking-[0.1em] text-wit no-underline transition-colors duration-200 hover:bg-wit hover:text-teal"
+            className="group relative mt-6 inline-flex items-center gap-4 overflow-hidden bg-donker px-10 py-5 font-body text-xs uppercase tracking-[0.2em] text-wit no-underline transition-all duration-300 hover:bg-donker/90"
           >
-            Neem contact op
+            <span className="relative z-10">Neem contact op</span>
+            <WaveLine 
+              className="relative z-10 w-8 transition-all duration-300 group-hover:w-12" 
+              color="white"
+              width="auto"
+            />
           </Link>
         </AnimateIn>
       </div>

@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { ConcentricLines } from "@/components/ui/ConcentricLines";
+import { WaveLine } from "@/components/ui/WaveLine";
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-donker px-6 py-16 text-wit md:px-10 md:py-24">
-      <ConcentricLines variant="offset" className="pointer-events-none absolute -bottom-[30%] -right-[10%] h-[50vh] w-[50vh] text-goud opacity-10" />
+      <ConcentricLines variant="offset" className="pointer-events-none absolute -bottom-[20%] -right-[5%] h-[50vh] w-[50vh] text-goud opacity-10" />
       <div className="relative mx-auto grid max-w-[var(--max-width-site)] gap-12 md:grid-cols-12 md:gap-8">
         {/* Name / tagline */}
         <div className="md:col-span-5">
           <p className="font-display text-3xl md:text-4xl">
             {"Klankentapper".split("").map((char, i) => (
               <span
-                key={`${char}-${i}`}
+                key={`footer-char-${i}-${char}`}
                 style={{
                   animation: `hero-char-color 16s ease-in-out ${i * 0.13 + 1.8}s infinite`,
                 }}
@@ -42,7 +43,11 @@ export function Footer() {
                 className="group relative w-fit font-body text-sm text-wit/80 no-underline transition-colors hover:text-wit"
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-teal transition-all duration-300 group-hover:w-full" />
+                <WaveLine 
+                  className="absolute -bottom-1 left-0 w-0 opacity-0 transition-all duration-300 group-hover:w-full group-hover:opacity-100" 
+                  color="var(--color-teal)"
+                  width="100%"
+                />
               </Link>
             ))}
           </nav>
