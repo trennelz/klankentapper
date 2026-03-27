@@ -1,3 +1,9 @@
+interface WaveLineProps {
+  className?: string;
+  color?: string;
+  width?: number | string;
+}
+
 export function WaveLine({ className = "", color = "currentColor", width = 40 }: WaveLineProps) {
   return (
     <svg
