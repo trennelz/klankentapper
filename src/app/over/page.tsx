@@ -105,7 +105,7 @@ export default function OverPage() {
           <div className="grid md:grid-cols-12 md:gap-8">
             <div className="md:col-span-7">
               <AnimateIn>
-                <p className="font-body text-xs uppercase tracking-[0.15em] text-ink/40">
+                <p className="font-body text-xs uppercase tracking-[0.1em] text-teal">
                   Samenwerking
                 </p>
                 <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
